@@ -223,7 +223,7 @@ html{
 /* Main content */
 
 .main-content{
-    background-color: rgb(197, 161, 126);
+    background-color: rgb(241, 233, 224);
 }
 
 /* features */
@@ -443,7 +443,7 @@ html{
 
 .card-product:hover .button-group{
     z-index: inherit;
-    right: -2.5rem;
+    right: -2rem;
 }
 
 .content-card-product{
