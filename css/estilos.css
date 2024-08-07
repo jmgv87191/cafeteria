@@ -24,6 +24,12 @@ html{
     margin: 0 auto;
 }
 
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
 /* header */
 
 .container-hero{
@@ -217,7 +223,7 @@ html{
 /* Main content */
 
 .main-content{
-    background-color: var(--background-color);
+    background-color: rgb(197, 161, 126);
 }
 
 /* features */
@@ -256,3 +262,279 @@ html{
     color: #777;
     font-weight: 500;
 }
+
+/* categories */
+
+.top-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card-category{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+.category-moca{
+    background-image: linear-gradient( #00000080, #00000080  ) ,url('../assets/moca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-capuchino{
+    background-image: linear-gradient( #00000080, #00000080  ) ,url('../assets/capuchino.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.category-expreso{
+    background-image: linear-gradient( #00000080, #00000080  ) ,url('../assets/expreso.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.card-category p{
+    font-size: 2.5rem;
+    color: white;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.card-category::after{
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate( -50%, 50%  );
+}
+
+.card-category span{
+    font-size: 1.6rem;
+    color: white;
+    &:hover{
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+}
+
+
+/* Top products */
+
+.top-products{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+.container-options{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container-options span{
+    color: #777;
+    background-color: white;
+    padding: .7rem 3rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--primary-color);
+        color: white;
+    }
+}
+
+.container-options span.active{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* products */
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 20rem, 1fr ) );
+    gap: 3rem;
+}
+
+.card-product{
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.container-img{
+    position: relative;
+
+}
+
+
+.container-img .discount{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 1.2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+.card-product:hover .discount{
+    background-color: black;
+}
+
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    z-index: -1;
+
+    transition: all .4s ease;
+}
+
+.button-group span{
+    border: 1px solid var(--primary-color);
+    padding: .4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+    &:hover{
+        background-color: var(--primary-color);
+    }
+}
+
+.card-product:hover .button-group{
+    z-index: inherit;
+    right: -2.5rem;
+}
+
+.content-card-product{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 1rem;
+}
+
+.stars{
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+
+.content-card-product h3{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
+.add-cart{
+    justify-self: start;
+    border: 2px solid var(--primary-color);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: #e2cdb8 ;
+    }
+}
+
+.content-card-product .price{
+    justify-self: end;
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.content-card-product .price span{
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #777;
+    margin-left: .5rem;
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* jmgv */
+
+
+.cont_img_jmgv{
+    background-image: linear-gradient(100deg, black, #00000020), url('../assets/cup-coffee-with-heart-drawn-foam.jpg');
+    width: 20rem;
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+}
+
