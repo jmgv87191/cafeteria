@@ -537,10 +537,33 @@ html{
 
 /* Blogs */
 
+.blogs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-blogs{
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    gap: 3rem;
+}
 
 
+.card-blogs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-
+.card-blogs .container-img{
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+    width: 30vw;
+    object-fit: cover;
+    overflow: hidden;
+}
 
 
 
