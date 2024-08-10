@@ -560,9 +560,6 @@ html{
     border-radius: 2rem;
     cursor: pointer;
     position: relative;
-    width: 30vw;
-    object-fit: cover;
-    overflow: hidden;
 }
 
 
