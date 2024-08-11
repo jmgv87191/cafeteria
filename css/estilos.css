@@ -643,9 +643,17 @@ html{
 }
 
 
+/* footer */
 
+.footer{
+    background-color: var(--primary-color);
+}
 
-
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
 
 
 
