@@ -701,6 +701,7 @@ html{
     text-decoration: none;
     color:  white;
     font-weight: 300;
+    display: block;
     &:hover{
         color: var(--dark-color);
     }
@@ -723,14 +724,111 @@ html{
 
 }
 
+.facebook:hover {
+    cursor: pointer;
+    filter: invert(41%) sepia(99%) saturate(1165%) hue-rotate(170deg) brightness(91%) contrast(98%);
+}
+
+.twitter:hover {
+    cursor: pointer;
+    filter: invert(64%) sepia(20%) saturate(2905%) hue-rotate(178deg) brightness(98%) contrast(102%);
+}
+
+.youtube:hover {
+    cursor: pointer;
+    filter: invert(27%) sepia(99%) saturate(7461%) hue-rotate(356deg) brightness(92%) contrast(112%);
+}
+
+.instagram:hover {
+    cursor: pointer;
+    filter: invert(50%) sepia(85%) saturate(3261%) hue-rotate(295deg) brightness(94%) contrast(93%);
+}
+
+.content p{
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 300;
+}
+
+.content input{
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #d2b495;
+    cursor: pointer;
+    padding: .5rem 0 1.2rem;
+    color: var(--dark-color);
+    display: block;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder{
+    color: #eee;
+}
+
+.content button{
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover{
+        color: var(--primary-color);
+        background-color: var(--background-color);
+    }
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #d2b495;
+}
+
+.copyright p{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
 
 
 
+@media (max-width: 768px) {
 
+    html{
+        font-size: 55%;
+    }
 
+    .hero{
+        padding: 2rem;
+    }
 
+    .customer-support{
+        display: none;
+    }
 
+    .content-shopping-cart{
+        display: none;
+    }
 
+    .navbar{
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media (max-width: 468px) {
+
+    
+
+}
 
 
 
